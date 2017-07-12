@@ -22,7 +22,7 @@
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Logo</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="active"><a href="dashboard.html">Dashboard</a></li>
             <li><a href="rutinas.html">Rutinas</a></li>
             <li><a href="clientes.html">Clientes</a></li>
             <li><a href="dieta.html">Dieta</a></li>
@@ -39,7 +39,26 @@
         <h3>Dashboard</h3>
       </div>
     </div>
-    <table class="responsive-table">
+    <div class="col s6">
+
+      <div class="container-btn">
+        <a class="btn-floating btn-medium waves-effect waves-light red" href="#modal1"><i class="material-icons">remove</i></a>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Desea Eliminar los clientes?</h4>
+            <p>
+              Debe selecionar el cliente a eliminar o se eliminaran todos.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <table class="responsive-table striped">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -82,6 +101,12 @@
       </tbody>
     </table>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
+});
+  </script>
 </body>
 
 </html>
