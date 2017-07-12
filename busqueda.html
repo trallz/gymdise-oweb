@@ -16,7 +16,6 @@
 
 <body>
   <div class="header">
-
     <nav>
       <div class="container">
         <div class="nav-wrapper">
@@ -25,64 +24,55 @@
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="rutinas.html">Rutinas</a></li>
             <li><a href="clientes.html">Clientes</a></li>
-            <li><a href="busqueda.html"><i class="material-icons">search</i></a></li>
             <li><a href="loggedIn.html"><i class="material-icons">perm_identity</i></a></li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
-  <div class="container">
-    <div class="col s6">
-      <div class="left-align">
-        <h3>Dashboard</h3>
-      </div>
-    </div>
-    <table class="responsive-table">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Nombre Rutina</th>
-          <th>Tipo Rutina</th>
-          <th>Dieta</th>
-          <th>Fecha Inicio</th>
-          <th>Fecha Finaliza</th>
-          <th>Celular</th>
-          <th>Fecha de pago</th>
-          <th>Peso</th>
-        </tr>
-      </thead>
+  <div class="container-form-login">
+    <div class="wrap">
+      <form class="col s12" action="index.html" method="post">
+        <div class="row">
+          <div class="input-field col s9">
 
-      <tbody>
-        <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-          <td>Ipertrofia</td>
-          <td>Hipocalórica</td>
-          <td>10/7/17</td>
-          <td>10/8/17</td>
-          <td>50131019</td>
-          <td>10/8/17</td>
-        </tr>
-        <tr>
-          <td>Alan</td>
-          <td>Jellybean</td>
-          <td>Ipertrofia</td>
-          <td>Disociada</td>
-          <td>11/7/17</td>
-          <td>11/8/17</td>
-          <td>51131019</td>
-          <td>11/8/17</td>
-        </tr>
-        <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>Aerobicos</td>
-          <td>Zona</td>
-        </tr>
-      </tbody>
-    </table>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingrese el nombre</label>
+
+          </div>
+          <div class="input-field col s3">
+            <a class="waves-effect waves-light btn">Buscar</a>
+          </div>
+        </div>
+      </form>
+
+          </div>
+          <div class="container-table-buscar">
+            <table class="responsive-table">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Termina</th>
+                <th>Celular</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>
+                  alvinecl12@gmail.com
+                </td>
+                <td>10/7/17</td>
+                <td>10/8/17</td>
+                <td>50131019</td>
+            </tbody>
+          </table>
+          </div>
   </div>
 </body>
 

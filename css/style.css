@@ -20,6 +20,16 @@ nav{
   background: #fff;
 
 }
+.container-table-buscar{
+  width: 90%;
+  max-width: 700px;
+  padding: 40px;
+  margin: auto;
+  background: #fff;
+}
+.container-form-busqueda{
+    
+}
 .container-form-login{
   width: 100%;
   padding: 50px;
