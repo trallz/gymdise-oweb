@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>proyectogym</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <!--Code Integration JQUERY-->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="rutinas.html">Rutinas</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="dieta.html">Dietas</a></li>
+            <li><a href="busqueda.html"><i class="material-icons">search</i></a></li>
+            <li><a href="LoggedIn.html"><i class="material-icons">perm_identity</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <h3>Creando Rutina:</h3>
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="" id="first_name2" type="text" class="validate">
+        <label class="active" for="first_name2">Dieta para</label>
+      </div>
+      <div class="input-field col s6">
+        <input value="" id="first_name2" type="text" class="validate">
+        <label class="active" for="first_name2">Tipo dieta</label>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">Descripción</label>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <p>
+            Seleccione los dias de dieta:
+          </p>
+          <form action="#">
+            <p>
+              <input type="checkbox" id="test1" />
+              <label for="test1">Lunes</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test2" checked="checked" />
+              <label for="test2">Martes</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test3" checked="checked" />
+              <label for="test3">Miercoles</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test4" checked="checked" />
+              <label for="test4">Jueves</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test5" checked="checked" />
+              <label for="test5">Viernes</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test6" checked="checked" />
+              <label for="test6">Sábado</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test7" checked="checked" />
+              <label for="test7">Domingo</label>
+            </p>
+          </form>
+        </div>
+        <div class="col s3">
+          <p>
+            Seleccione tipo de dieta:
+          </p>
+          <form action="#">
+            <p>
+              <input type="checkbox" id="test1" />
+              <label for="test1">Vegetariana</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test2" checked="checked" />
+              <label for="test2">Vegana</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test3" checked="checked" />
+              <label for="test3">Omnivoro</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test3" checked="checked" />
+              <label for="test4">Mixta</label>
+            </p>
+
+          </form>
+        </div>
+
+        <div class="col s5">
+          <div class="container-btn">
+            <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">add</i></a>
+          </div>
+
+          <div id="table" class="table-editable">
+            <span class="table-add glyphicon glyphicon-plus"></span>
+            <table class="table">
+              <tr>
+                <th>Horario comidas</th>
+                <th>Alimentos</th>
+                <th>Calorias</th>
+                <th>Proteina</th>
+                <th>Grasa</th>
+              </tr>
+              <tr>
+                <td contenteditable="true">Desayuno 6am</td>
+                <td contenteditable="true">1 taza avena, 6 claras de huevo,vaso de proteina</td>
+                <td contenteditable="true">20</td>
+                <td contenteditable="true">239</td>
+                <td contenteditable="true">239</td>
+                <td>
+                  <span class="table-remove glyphicon glyphicon-remove"></span>
+                </td>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s1; width:15%;">
+        <a class="waves-effect waves-light btn">Cancelar</a>
+      </div>
+      <div class="col s1; width:15%;">
+        <a class="waves-effect waves-light btn" href="rutinas.html">Guardar</a>
+      </div>
+    </div>
+  </div>
+  <!--Funtion datepicker-->
+  <script type="text/javascript">
+    $('.datepicker').pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  </script>
+  <script type="text/javascript">
+    $('#table').editableTableWidget();
+    $('#table').editableTableWidget() {
+      cloneProperties: ['background', 'border', 'outline']
+    };
+  </script>
+</body>
+
+</html>
